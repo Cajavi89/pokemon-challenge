@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useContext } from 'react'
 import './App.css'
-import { fetchPokemons } from './helpers/callPokemons'
+import AllPokemons from './components/AllPokemons'
+import { PokemonContext } from './context/PokemonContext'
 
 function App () {
-  useEffect(() => {
-    fetchPokemons(9)
-  }, [])
+  // eslint-disable-next-line no-unused-vars
+  const { pokemons } = useContext(PokemonContext)
   return (
     <div className="App">
-      <h1>hola pokemon</h1>
+      <h1>The Pokedex</h1>
+      <AllPokemons />
     </div>
   )
 }

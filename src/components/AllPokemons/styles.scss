@@ -1,0 +1,18 @@
+.wrapper-Pokedex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 600px;
+  margin: 15px auto;
+  gap: 10px;
+}
+
+.load-more-btn {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border-color: tomato;
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}

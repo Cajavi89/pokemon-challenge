@@ -1,0 +1,43 @@
+.wrapper-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  -webkit-box-shadow: 4px 3px 8px -2px #fff;
+  box-shadow: 2px 1.5px 4px -2px #555;
+
+  &__figure {
+    background-image: url("../../assets/images/blob.svg");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    // margin-bottom: -20px;
+
+    &--image {
+      width: auto;
+      height: auto;
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
+
+  &__pokemon-name {
+    font-size: 23px;
+    margin-top: 5px;
+    font-family: "Bubblegum Sans", cursive;
+    letter-spacing: 1px;
+  }
+  &__types {
+    display: flex;
+    text-align: center;
+
+    &--type-several:last-child::before {
+      content: "■";
+      font-size: 15px;
+      color: red;
+    }
+    &--type {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,13 +1,6 @@
-export const fetchPokemon = (id) => {
-  return (
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(res => res.json())
-      .then(data => console.log(data))
-  )
-}
-
-export const fetchPokemons = (number) => {
-  for (let i = 1; i <= number; i++) {
-    fetchPokemon(i)
-  }
+export const fetchPokemons = async (url) => {
+  console.log('fetchin', url)
+  const getPokemons = await fetch(url)
+  const res = await getPokemons.json()
+  return res
 }
