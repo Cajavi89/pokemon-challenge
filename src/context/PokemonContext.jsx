@@ -27,7 +27,8 @@ export const PokemonContextProvider = ({ children }) => {
 
   useEffect(() => {
     getAllPokemons()
-  }, [])
+    setPokemons(pokemons.sort((a, b) => a.id - b.id))
+  }, [setPokemons])
 
   return (
     <PokemonContext.Provider value= { { pokemons, handleClickLoadMore } }>

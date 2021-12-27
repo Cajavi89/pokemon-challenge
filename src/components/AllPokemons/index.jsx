@@ -6,7 +6,6 @@ import CardPokemon from '../CardPokemon'
 
 const AllPokemons = () => {
   const { pokemons, handleClickLoadMore } = useContext(PokemonContext)
-  console.log('allpokemon', pokemons)
 
   return (
     <>

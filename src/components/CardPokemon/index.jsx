@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const CardPokemon = ({ props }) => {
@@ -9,7 +10,7 @@ const CardPokemon = ({ props }) => {
       <figure className='wrapper-card__figure'>
         <img src={sprites.front_default} alt={name} className='wrapper-card__figure--image' />
       </figure>
-      <h3 className='wrapper-card__pokemon-name'>{name}</h3>
+      <Link to={`/pokemon/${id}`} ><h3 className='wrapper-card__pokemon-name'>{name}</h3></Link>
       <ul className='wrapper-card__types'>
         {types.map((type, index) => <li
           className= {types.length < 2
