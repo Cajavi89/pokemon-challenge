@@ -12,7 +12,7 @@ const AllPokemons = () => {
     <>
       {pokemons < 1
         ? <Spinner />
-        : <ul className='wrapper-Pokedex'>{pokemons.map((pokemon) => <CardPokemon key={pokemon.id} props={pokemon}/>)}</ul>}
+        : <ul className='wrapper-Pokedex'>{pokemons.sort((a, b) => a.id - b.id).map((pokemon) => <CardPokemon key={pokemon.id} props={pokemon}/>)}</ul>}
       <button className='load-more-btn' onClick={handleClickLoadMore}>Load More Pokemons!</button>
     </>
   )
